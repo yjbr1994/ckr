@@ -1,0 +1,27 @@
+def square(inpNum):
+return inpNum * inpNum
+
+class TestSquare(unittest.TestCase):
+def testSimpleCase(self):
+print("TestSquare testSimpleCase function")
+self.assertTrue(square(5) == 25)
+self.assertEquals(square(6), 36)
+self.assertFalse(square(2) == 5)
+self.assertAlmostEqual(1.0/3, 0.3333333)
+
+def testZeroCase(self):
+    print("TestSquare testZeroCase function")
+    self.assertTrue(square(0) == 0)
+
+def testRestServer(self):
+    import requests
+    import json
+    content = requests.get("https://jsonplaceholder.typicode.com/todos/1")
+    jsonContent = json.loads(content.text)
+    self.assertEqual(jsonContent["title"], "delectus aut autem")
+class TestSquare2(unittest.TestCase):
+def testOrder(self):
+print("TestSquare2 test function")
+
+if name == "main":
+unittest.main()
